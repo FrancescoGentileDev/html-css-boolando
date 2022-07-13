@@ -64,11 +64,23 @@ body {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+.red {
+    background-color: red;
+    color: white;
+}
+.green {
+    background-color: green;
+    color: white;
+}
 /*#endregion UTILITIES */
 
 /*#region HEADER*/
 header {
-    background-color: #FF6900;    
+    width: 100%;
+    position: fixed;
+    background-color: #FF6900;
+    z-index: 1;
 }
 
 .header > div { /*Divido lo spazio*/
@@ -76,8 +88,9 @@ header {
 }
 
 .header {
-    flex-basis: 75px;    
+    flex-basis: 70px;    
     justify-content: space-between;
+
 }
 
 
@@ -91,3 +104,82 @@ header {
     max-width: 100px;
 }
 /*#endregion HEADER*/
+
+main {
+    padding-top: 120px
+}
+
+/*#region Cards *****/
+
+    section {
+        position: relative;
+        margin: 20px
+    }
+
+/*#region card text *****/
+    .marca {
+        font-size: 0.8rem
+    }
+    .nome {
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    .prezzo, .tagliato{
+        color:red;
+        font-weight: bold;
+        font-size: 0.8rem;
+        margin-right: 0.2rem;
+    }
+
+    .tagliato {
+        color:black;
+        text-decoration: line-through;
+        font-weight: normal;
+    }
+
+    .badges{
+        position: absolute;
+        bottom: 85px;
+        left: 10px;
+    }
+
+    .badges {
+        width: 50%
+    }
+
+    .badges > p {
+        padding: 5px 3px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-right: 0.2rem;
+    }
+
+    #heart {
+        display: inline-block;
+        width: 50px;
+        line-height: 50px;
+        font-size: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: white;
+        border: 1px solid #FF6900;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        user-select: none;
+        cursor: pointer;
+        
+    }
+
+/*#endregion card text *****/
+
+.cards > section {
+    width: calc(100% / 3 - 40px);
+}
+
+section img {
+    width: 100%;
+    height: auto;
+}
+
+/*#endregion End Cards *****/

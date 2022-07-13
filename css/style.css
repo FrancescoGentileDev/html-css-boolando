@@ -9,6 +9,9 @@ body {
   line-height: 1.2;
   background-color: #fff;
 }
+body::-webkit-scrollbar {
+    display: none;
+}
 
 /*#region UTILITIES */
 
